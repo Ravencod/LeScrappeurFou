@@ -7,7 +7,7 @@ require 'open-uri'
 def get_the_email_of_a_townhal_from_its_webpage(a)
     val_d_oise = Hash.new
     page1 = Nokogiri::HTML(open("http://annuaire-des-mairies.com/#{a}"))
-    val_d_oise["name"] = page1.xpath("/html/body/div/main/section[1]/div/div/div/h1").text.to_s
+    val_d_oise["name"] = page1.xpath("/html/body/div/main/section[1]/div/div/div/h1").text.to_s[0..-9]
     val_d_oise["email"] = page1.xpath("/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]").text.to_s
     puts val_d_oise
 end
