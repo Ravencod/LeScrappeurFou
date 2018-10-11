@@ -6,4 +6,4 @@
 </ul>
 <p><strong><em>Lance les en avance ça va prendre du temps à charger !</em></strong></p>
 <p><em>Travail réalisé par Raphael Caillaux (@Raphael)</em></p>
-### Bonne correction ! :poop:
+<strong>Bonne correction ! :poop: </strong>
