@@ -22,8 +22,5 @@ def get_all_the_urls_of_val_doise_townhalls
     end
 end
 
-
-
-#get_the_email_of_a_townhal_from_its_webpage
 get_all_the_urls_of_val_doise_townhalls
 
