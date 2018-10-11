@@ -7,7 +7,7 @@ page1 = Nokogiri::HTML(open("http://www2.assemblee-nationale.fr/deputes/liste/re
 deputes = []
 x = 0
 while x < page1.xpath("//*[@id='deputes-list']/div/ul/li/a").size
-    a = page1.xpath("//*[@id='deputes-list']/div/ul/li/a")[x].text.encode!
+    a = page1.xpath("//*[@id='deputes-list']/div/ul/li/a")[x].text
     z = page1.xpath("//*[@id='deputes-list']/div/ul/li/a")[x]['href']
     page2 = Nokogiri::HTML(open("http://www2.assemblee-nationale.fr#{z}"))
     (page2.xpath("/html/body/div[3]/div/div/div/section[1]/div/article/div[3]/div/dl/dd[4]/ul/li/a").empty?) ? "no mail" : b = page2.xpath("/html/body/div[3]/div/div/div/section[1]/div/article/div[3]/div/dl/dd[4]/ul/li/a")[0]['href'].delete_prefix('mailto:')
